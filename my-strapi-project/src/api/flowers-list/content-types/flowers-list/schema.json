@@ -1,0 +1,63 @@
+{
+  "kind": "collectionType",
+  "collectionName": "flowers_lists",
+  "info": {
+    "singularName": "flowers-list",
+    "pluralName": "flowers-lists",
+    "displayName": "FlowersList",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "default": "Пионы \"Cалмон\"",
+      "pluginOptions": {}
+    },
+    "price": {
+      "type": "integer",
+      "default": 10090,
+      "pluginOptions": {}
+    },
+    "picture": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "files",
+        "images"
+      ],
+      "pluginOptions": {}
+    },
+    "description": {
+      "type": "text",
+      "default": "Пионы премиального сорта \"Итч Сальмон\". Букет упакован в дизайнерскую пленку и декорирован атласными лентами. Отправляем фото букета перед доставкой.",
+      "pluginOptions": {}
+    },
+    "size": {
+      "type": "integer",
+      "default": 29,
+      "pluginOptions": {}
+    },
+    "delivery": {
+      "type": "text",
+      "default": "через 2-3 часа после оформления заказа. Если вам нужен букет \"прямо сейчас\", свяжитесь с нами и мы предложим вам варианты букетов, которые сможем доставить быстрее всего.   Бесплатно к букету прилагается транспортировочная коробка, аквапак, подкормка, инструкция по уходу за букетом.",
+      "pluginOptions": {}
+    },
+    "imageLink": {
+      "type": "text",
+      "pluginOptions": {}
+    },
+    "flowerCare": {
+      "type": "richtext"
+    },
+    "categories": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::category.category"
+    }
+  }
+}
