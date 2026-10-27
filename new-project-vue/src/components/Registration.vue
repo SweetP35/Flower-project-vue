@@ -139,7 +139,7 @@ const submitForm = async () => {
 	validateForm()
 	if (!errors.value.name && !errors.value.email && !errors.value.password && !errors.value.confirmPassword){
 		try {
-			const response = await fetchData('http://localhost:1337/api/auth/local/register', 'POST', {
+      await fetchData('http://localhost:1337/api/auth/local/register', 'POST', {
 				username: fields.value.name, email: fields.value.email, password: fields.value.password
 			})
 			emit('registration-success')
@@ -150,7 +150,6 @@ const submitForm = async () => {
 				confirmPassword: ''
 			}
 			errors.value.general = 'Вы успешно зарегистрировались'
-			console.log(response)
 		} catch (error) {
 			console.error(error)
 			errors.value.general = 'Пользователь с таким email или именем уже существует'

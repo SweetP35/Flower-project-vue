@@ -72,7 +72,7 @@ const loadFlowersFavorites = async (newFavorites) => {
 		flowersfavoritesArr.value = response.data
 		totalPage.value = response.meta.pagination.pageCount
 	} catch (error) {
-		console.log(error)
+		console.error(error)
 	} finally {
 		loading.value = false
 	}

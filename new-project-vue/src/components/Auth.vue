@@ -102,7 +102,6 @@ const submitForm = async () => {
 			})
 			store.commit('setUser', response.user)
 			emit('auth-success')
-			console.log(response)
 		} catch (error) {
 			console.error(error)
 			errors.value.general = 'Неверный email или пароль'

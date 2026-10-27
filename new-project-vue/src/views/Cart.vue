@@ -78,7 +78,7 @@ const loadFlowersCart = async () => {
 		flowerArr.value = response.data
 		totalPage.value = response.meta.pagination.pageCount
 	} catch (error) {
-		console.log(error)
+		console.error(error)
 	} finally {
 		loading.value = false
 	}

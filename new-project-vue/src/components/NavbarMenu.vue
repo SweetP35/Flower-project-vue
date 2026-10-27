@@ -131,7 +131,6 @@ import Registration from './Registration.vue'
 import { useStore } from 'vuex'
 const store = useStore()
 const authUser = computed(() => store.state.user)
-console.log(authUser)
 const cart = computed(() => store.state.user.cart)
 const cartCount = computed(() => cart.value.reduce((acc, item) => acc + item.count, 0))
 const isOpen = ref(false)
@@ -195,7 +194,7 @@ const loadFlowers = async () => {
 		const data = await fetchData(`http://localhost:1337/api/flowers-lists?filters[title][$containsi]=${searchQuery.value}`, 'GET')
 		flowers.value = data.data
 	} catch (error) {
-		console.log(error)
+    console.error(error)
 	} finally {
 		loading.value = false
 	}
